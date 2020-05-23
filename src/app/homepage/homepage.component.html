@@ -1,0 +1,34 @@
+<app-nav></app-nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let item of books | paginate: { itemsPerPage : 9, currentPage : pager.currentPage } ">
+            <div class="card">
+                <div class="upper">
+                    <img src="{{item.url}}" class="img-fluid book-img" alt="book image" />
+                </div>
+                <div class="lower">
+                    <div class="row">
+                        <div class="date">20 July 2020</div>
+                    </div>
+                    <div class="row">
+                        <div class="card-title"><b>500 Years of Summer</b></div>
+                    </div>
+                    <div class="row">
+                        <div class="card-text">{{item.title.slice(0,50)}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="request">Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="xyz" *ngIf="pager.pages && pager.pages.length">
+            <li [ngClass]="{'disabledBtn': pager.currentPage === 1}" class="list-item" (click)="setPage(pager.currentPage-1)">&laquo;</li>
+            <li *ngFor="let page of pager.pages" [ngClass]="{'active-page': pager.currentPage === page}" class="list-item" (click)="setPage(page)">{{page}}</li>
+            <li [ngClass]="{'disabledBtn': pager.currentPage === pager.totalPages}" class="list-item" (click)="setPage(pager.currentPage+1)">&raquo;</li>
+        </ul>
+    </div>
+
