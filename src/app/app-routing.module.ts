@@ -4,13 +4,16 @@ import { SelectGenreComponent } from 'src/app/select-genre/select-genre.componen
 import { LogInComponent } from 'src/app/log-in/log-in.component';
 import { HomepageComponent } from 'src/app/homepage/homepage.component';
 import { BookInfoComponent } from 'src/app/book-info/book-info.component';
-
+import { ProfilePageComponent} from 'src/app/profile-page/profile-page.component';
+import { AddBookToLibraryComponent} from 'src/app/add-book-to-library/add-book-to-library.component';
 
 const routes: Routes = [
   { path: 'log-in' , component: LogInComponent},
   { path: 'select-genre' , component: SelectGenreComponent},
   { path: 'homepage' , component: HomepageComponent},
-  { path: 'book-info' , component: BookInfoComponent}
+  { path: 'book-info' , component: BookInfoComponent},
+  { path: 'profile-page' , component: ProfilePageComponent},
+  { path: 'add-book-to-library', component: AddBookToLibraryComponent}
 ];
 
 @NgModule({
