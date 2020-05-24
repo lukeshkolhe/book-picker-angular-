@@ -1,0 +1,36 @@
+<div class="log">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+    <table>
+      <tr>
+        <td>
+          <p class="form-group">Login<p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <span class="has-float-label">
+            <input id="email" type="text" placeholder="Email" formControlName="email" class="form-control"
+              [ngClass]="{'is-invalid': submitted && f.email.errors}" required />
+              <label for="email">Email</label>
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              incorrect email
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <span class="has-float-label">
+            <input id="password" type="password" placeholder="Password" formControlName="password" class="form-control"
+              [ngClass]="{'is-invalid': submitted && f.password.errors}" required />
+              <label for="password">Password</label>
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              incorrect email
+            </div>
+          </span>
+        </td>
+    </table>
+      <button routerLink="/homepage" type="submit" class="login_button">Log In</button>
+    <p class="or">OR</p>
+  </form>
+</div>

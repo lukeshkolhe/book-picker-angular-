@@ -1,0 +1,41 @@
+<app-nav [check]=true></app-nav>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <div class="left">
+        <img class="img-fluid" id="genreImg" src="../../../assets/image/1.png">
+        <p class="genre">Romantic</p>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6" style="padding-left: 7%;padding-right: 7%;">
+      <ul class="book_dis">
+        <li class="BookTitle">{{title}}</li>
+        <li class="BookAuthor">{{author}}</li>
+        <li>
+            <ul class="date">
+              <li class="in"><img id="calender" class="img-fluid" src="../../assets/image/calender.png"></li>
+              <li class="in" id="date">{{date}}</li>
+            </ul>
+        </li>
+        <li class="BookDis">{{dis}}</li>
+        <li>
+          <ul class="details">
+            <li class="in">ISBN No :-</li>
+            <li class="in">{{isbn}}</li>
+          </ul>
+        </li>
+        <li>
+          <ul class="details">
+            <li class="in">Edition :-</li>
+            <li class="in">{{edition}}</li>
+          </ul>
+        </li>
+      </ul>
+      <a routerLink="/select_genre">
+        <button class="request_button">Request</button>
+      </a>
+    </div>
+  </div>
+</div>
