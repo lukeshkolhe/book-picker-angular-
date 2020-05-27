@@ -6,10 +6,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./nav.component.sass']
 })
 export class NavComponent implements OnInit {
-  @Input() check: boolean;
+  @Input() check ;
   constructor() {
    }
 
   ngOnInit() {
-}
+    }
 }

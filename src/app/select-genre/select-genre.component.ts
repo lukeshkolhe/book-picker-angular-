@@ -17,12 +17,10 @@ export class SelectGenreComponent implements OnInit {
 
   select( a )
   {
-    if (this.selected[a] === 0)
-    {
+    if (this.selected[a] === 0){
       this.selected[a] = 1;
       this.style[a] = this.styler;
-    } else
-    {
+    } else {
       this.selected[a] = 0;
       this.style[a] = {};
     }
