@@ -15,9 +15,8 @@ export class SelectGenreComponent implements OnInit {
   ngOnInit() {
   }
 
-  select( a )
-  {
-    if (this.selected[a] === 0){
+  select( a ) {
+    if (this.selected[a] === 0) {
       this.selected[a] = 1;
       this.style[a] = this.styler;
     } else {
