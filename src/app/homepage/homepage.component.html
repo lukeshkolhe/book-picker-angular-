@@ -1,24 +1,27 @@
-<app-nav></app-nav>
+<app-nav [check]=true></app-nav>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-4" *ngFor="let item of books | paginate: { itemsPerPage : 9, currentPage : pager.currentPage } ">
-      <div class="card">
-        <div class="upper">
-          <img src="{{item.url}}" class="img-fluid book-img" alt="book image" />
-        </div>
-        <div class="lower">
-          <div class="row">
-            <div class="date">20 July 2020</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4"
+        *ngFor="let item of books | paginate: { itemsPerPage : 9, currentPage : pager.currentPage } ">
+        <div class="card">
+          <div class="upper">
+            <img src="../../assets/image/1.png" class="img-fluid book-img" alt="book image" />
           </div>
-          <div class="row">
-            <div class="card-title"><b>500 Years of Summer</b></div>
-          </div>
-          <div class="row">
-            <div class="card-text">{{item.title.slice(0,50)}}
+          <div class="lower">
+            <div class="row">
+              <div class="date">20 July 2020</div>
             </div>
-          </div>
-          <div class="row">
+            <div class="row">
+              <div class="card-title"><b>500 Years of Summer</b></div>
+            </div>
+            <div class="row">
+              <div class="card-text">{{item.title.slice(0,50)}}
+              </div>
+            </div>
+            <div class="row">
               <button routerLink="/book-info" class="request">Request</button>
+            </div>
           </div>
         </div>
       </div>
