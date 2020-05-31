@@ -21,6 +21,8 @@ import { ProfileNameCoverComponent } from './profile-page/profile-name-cover/pro
 import { UserInfoComponent } from './profile-page/user-info/user-info.component';
 import { UserLibraryComponent } from './profile-page/user-library/user-library.component';
 import { AddBookToLibraryComponent } from './add-book-to-library/add-book-to-library.component';
+import { FPassComponent } from './f-pass/f-pass.component';
+import { CPassComponent } from './c-pass/c-pass.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { AddBookToLibraryComponent } from './add-book-to-library/add-book-to-lib
     ProfileNameCoverComponent,
     UserInfoComponent,
     UserLibraryComponent,
-    AddBookToLibraryComponent
+    AddBookToLibraryComponent,
+    FPassComponent,
+    CPassComponent
   ],
   imports: [
     BrowserModule,
