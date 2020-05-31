@@ -11,7 +11,7 @@ export class BookInfoComponent implements OnInit {
   date = '1 july 2020';
   isbn = '125896478' ;
   edition = '2020' ;
-  dis = 'Tom (Joseph Gordon-Levitt), greeting-card writer and hopeless romantic, is caught completely...';
+  dis = 'Tom (Joseph Gordon-Levitt), greeting-card writer and hopeless romantic, is caught completely ';
   constructor() { }
 
   ngOnInit() {
